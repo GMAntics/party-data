@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below and link to https://anticsapp.com/party-data/, the canonical source."
+title: "Antics party data: how groups play party games, 26 August to 4 October 2026"
+type: dataset
+abstract: "Anonymous shares, ratios and medians from parties played on Antics, a pass-the-phone party game app, between 26 August and 4 October 2026: when parties start (UK time), which night of the week is busiest, how many games a party plays, which game comes first, how often Truth or Dare players pick truth or dare, how often each game's cards are skipped, and how long a card stays on screen. Percentages, ratios and medians only."
+authors:
+  - name: "Antics App Ltd"
+    website: "https://anticsapp.com/"
+    email: "support@anticsapp.com"
+    city: "London"
+    country: "GB"
+date-released: "2026-10-05"
+url: "https://anticsapp.com/party-data/"
+repository-code: "https://github.com/GMAntics/party-data"
+license: CC-BY-4.0
+keywords:
+  - "party games"
+  - "party game statistics"
+  - "Truth or Dare"
+  - "Never Have I Ever"
+  - "Would You Rather"
+  - "student nights in"
+  - "freshers"
+  - "open data"

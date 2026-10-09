@@ -1,0 +1,127 @@
+{
+  "profile": "tabular-data-package",
+  "name": "antics-party-data",
+  "title": "Antics party data: how groups play party games, 26 August to 4 October 2026",
+  "description": "Anonymous shares, ratios and medians from parties played on Antics, a pass-the-phone party game app, between 26 August and 4 October 2026: when parties start (UK time), which night of the week is busiest, how many games a party plays, which game comes first, how often Truth or Dare players pick truth or dare, how often each game's cards are skipped, and how long a card stays on screen. Percentages, ratios and medians only. Every figure clears a minimum sample size. The canonical source is https://anticsapp.com/party-data/.",
+  "homepage": "https://anticsapp.com/party-data/",
+  "keywords": [
+    "party games",
+    "party game statistics",
+    "Truth or Dare",
+    "Never Have I Ever",
+    "Would You Rather",
+    "student nights in",
+    "freshers",
+    "open data"
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Antics party data, anticsapp.com",
+      "path": "https://anticsapp.com/party-data/"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Antics App Ltd",
+      "path": "https://anticsapp.com/",
+      "email": "support@anticsapp.com",
+      "role": "author"
+    }
+  ],
+  "resources": [
+    {
+      "profile": "tabular-data-resource",
+      "name": "antics-party-data-2026-10",
+      "title": "Every figure on the Antics party data page, 26 August to 4 October 2026",
+      "description": "One row per published figure. Every value is a share, an index, a ratio or a median; there are no counts. Rows cover 26 August to 4 October 2026 (UK days), except time_on_screen, which covers 6 September to 4 October 2026.",
+      "path": "data/antics-party-data-2026-10.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "bytes": 6783,
+      "hash": "sha256:9c90704e9a9cce10233dc0a8d5a1a53ad45da1ac49c242d9809c3df4ccf19d82",
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "section",
+            "title": "Section",
+            "type": "string",
+            "description": "Which finding the row belongs to. start_time: share of parties starting in each part of the day, UK time, per hour. night: parties per night of the week as an index (average night = 100), plus the Saturday against Monday to Thursday ratio. games_per_party: share of parties playing one, two, three, or four or more games. games_played: share of parties playing at least one card of each game. games: first game and switching facts. truth_or_dare: truth and dare picks. skips: share of each game's cards on screen under two seconds. time_on_screen: median seconds a card stays on screen, by game.",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "start_time",
+                "night",
+                "games_per_party",
+                "games_played",
+                "games",
+                "truth_or_dare",
+                "skips",
+                "time_on_screen"
+              ]
+            }
+          },
+          {
+            "name": "measure",
+            "title": "Measure",
+            "type": "string",
+            "description": "What the row measures, in plain words: a part of the day, a night of the week, a game, or a named comparison.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number",
+            "description": "The published figure, in the unit given in the unit column. One decimal place for start times, the Saturday ratio, skips and seconds on screen; whole numbers elsewhere.",
+            "constraints": {
+              "required": true,
+              "minimum": 0
+            }
+          },
+          {
+            "name": "unit",
+            "title": "Unit",
+            "type": "string",
+            "description": "What the value is measured in, for example '% of parties', 'index (average night = 100)', 'times as many parties' or 'median seconds'.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "window",
+            "title": "Window",
+            "type": "string",
+            "description": "The UK days the row covers, first and last day included, as 'YYYY-MM-DD to YYYY-MM-DD'.",
+            "constraints": {
+              "required": true,
+              "pattern": "[0-9]{4}-[0-9]{2}-[0-9]{2} to [0-9]{4}-[0-9]{2}-[0-9]{2}"
+            }
+          },
+          {
+            "name": "definition",
+            "title": "Definition",
+            "type": "string",
+            "description": "The counting rule behind the row, in a few words.",
+            "constraints": {
+              "required": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
